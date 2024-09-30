@@ -1,3 +1,5 @@
+<img src="https://wallpapers.com/images/featured/marvel-pictures-a8zq5u8qw3ega7cx.jpg" alt="heros" style="height: 300px; width: 100%; object-fit: contain;"/>
+
 # MarvelApp 🚀
 
 Welcome to MarvelApp, your go-to application for exploring Marvel characters! This app allows you to search for your favorite Marvel characters, view detailed information, and save your favorites for offline viewing.
@@ -7,7 +9,45 @@ Welcome to MarvelApp, your go-to application for exploring Marvel characters! Th
 MarvelApp follows a modular architecture to ensure scalability and maintainability. The architecture is divided into the following modules:
 
 - **Domain Module**: Contains the business logic and use cases.
+```
+└── Domain
+    ├── Package.swift
+    ├── Sources
+    │   ├── Entities
+    │   │   └── Character.swift
+    │   ├── Failures
+    │   │   └── AppFailure.swift
+    │   ├── RepositoryProtocol
+    │   │   └── CharacterRepositoryProtocol.swift
+    │   ├── UseCaseProtocol
+    │   │   └── GetCharacterUseCaseProtocol.swift
+    │   └── UseCases
+    │       └── GetCharacterUseCase.swift
+    └── Tests
+        └── DomainTests
+```
 - **Data Module**: Manages data sources and repositories.
+```
+├── Data
+│   ├── Package.resolved
+│   ├── Package.swift
+│   ├── Sources
+│   │   ├── DataSource
+│   │   │   └── Remote
+│   │   │       ├── APIConstants.swift
+│   │   │       ├── CharacterRemoteDataSourceProtocol.swift
+│   │   │       └── MarvelRoute.swift
+│   │   ├── Models
+│   │   │   ├── CharacterModel.swift
+│   │   │   ├── PaginationResponseModel.swift
+│   │   │   └── ThumbnailModel.swift
+│   │   └── Repositories
+│   │       └── CharacterRepository.swift
+│   └── Tests
+│       └── RepositoriesTests
+│           └── CharacterRepositorySpec.swift
+	
+```
 - **Core Module**: Houses shared components, style guides, and shared protocols.
 - **Home Module**: Includes components for the home page, detail page, and favorite page.
 
@@ -16,29 +56,41 @@ MarvelApp follows a modular architecture to ensure scalability and maintainabili
 
 ## Features and TODOs 📝
 
-### 1. Home Page 🏠
-- **Feature**: Display a list of Marvel characters and enable search functionality.
-- **TODOs**:
-  - Create a home page tab that shows a list of Marvel characters.
-  - Implement a search feature to find specific characters.
-  - Add redirection to a detail page for each character.
-  - **Home ViewModel**:
-    - Use a use case to fetch the list and search results.
-    - Manage different states: initial, loading, loaded, and error.
+### 1.Home Module 🏠 
+  - a. Home Page
+    - **Feature**: Display a list of Marvel characters and enable search functionality.
+    - **TODOs**:
+      - [ ] Create a home page tab that shows a list of Marvel characters.
+      - [ ] Implement a search feature to find specific characters.
+      - [ ] Add redirection to a detail page for each character.
+      - **Home ViewModel**:
+        - [ ] Use a use case to fetch the list and search results.
+        - [ ] Manage different states: initial, loading, loaded, and error.
 
-### 2. Detail Page 📜
-- **Feature**: Display detailed information about a character and allow users to favorite them.
-- **TODOs**:
-  - Create a detail page with a favorite feature.
-  - **Detail ViewModel**:
-    - Manage character details and favorite status.
+  - b. Detail Page 
+    - **Feature**: Display detailed information about a character and allow users to favorite them.
+    - **TODOs**:
+      - [ ] Create a detail page with a favorite feature.
+      - **Detail ViewModel**:
+        - [ ] Manage character details and favorite status.
 
-### 3. Favorite Page ❤️
-- **Feature**: Display a list of favorited characters for offline viewing.
-- **TODOs**:
-  - Create a favorite page tab to visualize offline or stored favorite characters.
-  - **Favorite ViewModel**:
-    - Use a use case to fetch the favorite list from local storage.
+  - c. Favorite Page 
+    - **Feature**: Display a list of favorited characters for offline viewing.
+    - **TODOs**:
+      - [ ] Create a favorite page tab to visualize offline or stored favorite characters.
+      - **Favorite ViewModel**:
+        - [ ] Use a use case to fetch the favorite list from local storage.
+
+
+### 2. Core Module
+- **TODOs**
+  - [ ] Style Guide
+  - [ ] Shared Components
+  
+### 3. Tests
+- **TODOs**
+  - [ ] 75% Test Coverage
+
 
 ## How to Run the Project 🛠️
 
@@ -85,6 +137,12 @@ MarvelApp follows a modular architecture to ensure scalability and maintainabili
 ## License 📄
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+
+## References 📚
+
+- https://nimblehq.co/blog/modern-approach-modularize-ios-swiftui-spm
+- https://github.com/mohanedy/swifty-marvel?tab=readme-ov-file#folder-structure
 
 ---
 
