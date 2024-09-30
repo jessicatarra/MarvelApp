@@ -6,6 +6,20 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B2E5CC0E2CAA34E300C912E1 /* DataSource in Frameworks */ = {isa = PBXBuildFile; productRef = B2E5CC0D2CAA34E300C912E1 /* DataSource */; };
+		B2E5CC122CAA34E300C912E1 /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = B2E5CC112CAA34E300C912E1 /* Models */; };
+		B2E5CC142CAA34E300C912E1 /* Repositories in Frameworks */ = {isa = PBXBuildFile; productRef = B2E5CC132CAA34E300C912E1 /* Repositories */; };
+		B2E5CC162CAA34E300C912E1 /* Entities in Frameworks */ = {isa = PBXBuildFile; productRef = B2E5CC152CAA34E300C912E1 /* Entities */; };
+		B2E5CC182CAA34E300C912E1 /* Failures in Frameworks */ = {isa = PBXBuildFile; productRef = B2E5CC172CAA34E300C912E1 /* Failures */; };
+		B2E5CC1A2CAA34E300C912E1 /* RepositoryProtocol in Frameworks */ = {isa = PBXBuildFile; productRef = B2E5CC192CAA34E300C912E1 /* RepositoryProtocol */; };
+		B2E5CC1C2CAA34E300C912E1 /* UseCaseProtocol in Frameworks */ = {isa = PBXBuildFile; productRef = B2E5CC1B2CAA34E300C912E1 /* UseCaseProtocol */; };
+		B2E5CC1E2CAA34E300C912E1 /* UseCases in Frameworks */ = {isa = PBXBuildFile; productRef = B2E5CC1D2CAA34E300C912E1 /* UseCases */; };
+		B2E5CC212CAA350700C912E1 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = B2E5CC202CAA350700C912E1 /* Swinject */; };
+		B2E5CC242CAA351C00C912E1 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = B2E5CC232CAA351C00C912E1 /* Moya */; };
+		B2E5CC262CAA351C00C912E1 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = B2E5CC252CAA351C00C912E1 /* ReactiveMoya */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		B2DE42D82CA83A330090C9FD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +41,8 @@
 		B2DE42C52CA83A320090C9FD /* MarvelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2DE42D72CA83A330090C9FD /* MarvelAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2DE42E12CA83A330090C9FD /* MarvelAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2E5CC0A2CAA34BB00C912E1 /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Domain; path = Packages/Domain; sourceTree = "<group>"; };
+		B2E5CC0B2CAA34C300C912E1 /* Data */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Data; path = Packages/Data; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -52,6 +68,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2E5CC1E2CAA34E300C912E1 /* UseCases in Frameworks */,
+				B2E5CC212CAA350700C912E1 /* Swinject in Frameworks */,
+				B2E5CC1A2CAA34E300C912E1 /* RepositoryProtocol in Frameworks */,
+				B2E5CC142CAA34E300C912E1 /* Repositories in Frameworks */,
+				B2E5CC1C2CAA34E300C912E1 /* UseCaseProtocol in Frameworks */,
+				B2E5CC262CAA351C00C912E1 /* ReactiveMoya in Frameworks */,
+				B2E5CC242CAA351C00C912E1 /* Moya in Frameworks */,
+				B2E5CC122CAA34E300C912E1 /* Models in Frameworks */,
+				B2E5CC0E2CAA34E300C912E1 /* DataSource in Frameworks */,
+				B2E5CC182CAA34E300C912E1 /* Failures in Frameworks */,
+				B2E5CC162CAA34E300C912E1 /* Entities in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,9 +102,12 @@
 		B2DE42BC2CA83A320090C9FD = {
 			isa = PBXGroup;
 			children = (
+				B2E5CC0B2CAA34C300C912E1 /* Data */,
+				B2E5CC0A2CAA34BB00C912E1 /* Domain */,
 				B2DE42C72CA83A320090C9FD /* MarvelApp */,
 				B2DE42DA2CA83A330090C9FD /* MarvelAppTests */,
 				B2DE42E42CA83A330090C9FD /* MarvelAppUITests */,
+				B2E5CC0C2CAA34E300C912E1 /* Frameworks */,
 				B2DE42C62CA83A320090C9FD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +122,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		B2E5CC0C2CAA34E300C912E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -102,6 +139,7 @@
 				B2DE42C12CA83A320090C9FD /* Sources */,
 				B2DE42C22CA83A320090C9FD /* Frameworks */,
 				B2DE42C32CA83A320090C9FD /* Resources */,
+				B2E5CC272CAA353900C912E1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -112,6 +150,17 @@
 			);
 			name = MarvelApp;
 			packageProductDependencies = (
+				B2E5CC0D2CAA34E300C912E1 /* DataSource */,
+				B2E5CC112CAA34E300C912E1 /* Models */,
+				B2E5CC132CAA34E300C912E1 /* Repositories */,
+				B2E5CC152CAA34E300C912E1 /* Entities */,
+				B2E5CC172CAA34E300C912E1 /* Failures */,
+				B2E5CC192CAA34E300C912E1 /* RepositoryProtocol */,
+				B2E5CC1B2CAA34E300C912E1 /* UseCaseProtocol */,
+				B2E5CC1D2CAA34E300C912E1 /* UseCases */,
+				B2E5CC202CAA350700C912E1 /* Swinject */,
+				B2E5CC232CAA351C00C912E1 /* Moya */,
+				B2E5CC252CAA351C00C912E1 /* ReactiveMoya */,
 			);
 			productName = MarvelApp;
 			productReference = B2DE42C52CA83A320090C9FD /* MarvelApp.app */;
@@ -195,6 +244,10 @@
 			);
 			mainGroup = B2DE42BC2CA83A320090C9FD;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				B2E5CC1F2CAA350000C912E1 /* XCRemoteSwiftPackageReference "Swinject" */,
+				B2E5CC222CAA351C00C912E1 /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B2DE42C62CA83A320090C9FD /* Products */;
 			projectDirPath = "";
@@ -230,6 +283,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B2E5CC272CAA353900C912E1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [[ \"$(uname -m)\" == arm64 ]]\nthen\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif command -v swiftlint >/dev/null 2>&1\nthen\n    SWIFTLINT_OUTPUT=$(swiftlint)\n\n    if [[ $SWIFTLINT_OUTPUT == *\"warning: Currently running SwiftLint\"* ]]\n    then\n        echo \"SwiftLint warning: Currently running SwiftLint version does not match the specified configuration version.\"\n    fi\nelse\n    echo \"warning: `swiftlint` command not found - See https://github.com/realm/SwiftLint#installation for installation instructions.\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B2DE42C12CA83A320090C9FD /* Sources */ = {
@@ -558,6 +631,75 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B2E5CC1F2CAA350000C912E1 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.1;
+			};
+		};
+		B2E5CC222CAA351C00C912E1 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B2E5CC0D2CAA34E300C912E1 /* DataSource */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DataSource;
+		};
+		B2E5CC112CAA34E300C912E1 /* Models */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Models;
+		};
+		B2E5CC132CAA34E300C912E1 /* Repositories */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Repositories;
+		};
+		B2E5CC152CAA34E300C912E1 /* Entities */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Entities;
+		};
+		B2E5CC172CAA34E300C912E1 /* Failures */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Failures;
+		};
+		B2E5CC192CAA34E300C912E1 /* RepositoryProtocol */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RepositoryProtocol;
+		};
+		B2E5CC1B2CAA34E300C912E1 /* UseCaseProtocol */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UseCaseProtocol;
+		};
+		B2E5CC1D2CAA34E300C912E1 /* UseCases */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UseCases;
+		};
+		B2E5CC202CAA350700C912E1 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2E5CC1F2CAA350000C912E1 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		B2E5CC232CAA351C00C912E1 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2E5CC222CAA351C00C912E1 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		B2E5CC252CAA351C00C912E1 /* ReactiveMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2E5CC222CAA351C00C912E1 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = ReactiveMoya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B2DE42BD2CA83A320090C9FD /* Project object */;
 }
