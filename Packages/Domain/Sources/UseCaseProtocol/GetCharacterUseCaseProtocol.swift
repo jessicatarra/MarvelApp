@@ -17,5 +17,5 @@ public struct GetCharactersParams {
 }
 
 public protocol GetCharacterUseCaseProtocol {
-    func execute(with params: GetCharactersParams) async -> Result<[Character], AppFailure>
+    func execute(with params: GetCharactersParams, completion: @escaping (Result<[Character], AppFailure>) -> Void)
 }

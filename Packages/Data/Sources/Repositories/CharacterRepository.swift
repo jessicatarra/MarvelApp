@@ -14,27 +14,35 @@ import RepositoryProtocol
 
 public class CharacterRepository: CharacterRepositoryProtocol {
     private let charactersDataSource: CharacterRemoteDataSourceProtocol
+    private var cache: [Int: [Character]] = [:]
 
     public init(charactersDataSource: CharacterRemoteDataSourceProtocol) {
         self.charactersDataSource = charactersDataSource
     }
 
-    public func getCharacters(from offset: Int) async -> Result<[Character], AppFailure> {
-        let result = await charactersDataSource.getCharacters(from: offset)
-        switch result {
-        case .success(let data):
-            let characters = data.results.map { $0 as Character }
-            return .success(characters)
+    public func getCharacters(from offset: Int, completion: @escaping (Result<[Character], AppFailure>) -> Void) {
+        if let cachedCharacters = cache[offset] {
+            completion(.success(cachedCharacters))
+        }
 
-        case .failure(let error):
-            return .failure(AppFailure.serverError(message: error.localizedDescription))
+        charactersDataSource.getCharacters(from: offset) { result in
+            switch result {
+            case .success(let paginationResponse):
+                let characters = (paginationResponse.results ?? []).compactMap { $0 as Character }
+                self.cache[offset] = characters
+                completion(.success(characters))
+
+            case .failure(let error):
+                let appFailure = AppFailure.serverError(message: error.localizedDescription)
+                completion(.failure(appFailure))
+            }
         }
     }
 }
 
 extension CharacterModel: Character {
     public var description: String? {
-        return self.characterDescription
+        return characterDescription
     }
 
     public var isFavorite: Bool { false }

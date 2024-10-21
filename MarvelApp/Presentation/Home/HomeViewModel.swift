@@ -36,20 +36,22 @@ final class HomeViewModel: ViewModel {
 
 extension HomeViewModel {
     func loadCharacters(from offset: Int = 0) async {
-        state = .loading
-        let result = await getCharactersUseCase.execute(with: GetCharactersParams(offset: offset))
+        getCharactersUseCase.execute(with: GetCharactersParams(offset: offset)) { [weak self] result in
+            guard let self = self else { return }
+            state = .loading
 
-        switch result {
-        case .success(let data):
-            characters.append(contentsOf: data.map(CharacterItem.init))
+            switch result {
+            case .success(let data):
+                characters.append(contentsOf: data.map(CharacterItem.init))
 
-            if characters.isEmpty {
-                state = .empty
-            } else {
-                state = .loaded
+                if characters.isEmpty {
+                    state = .empty
+                } else {
+                    state = .loaded
+                }
+            case .failure(let err):
+                state = .error(err.localizedDescription)
             }
-        case .failure(let err):
-            state = .error(err.localizedDescription)
         }
     }
 }

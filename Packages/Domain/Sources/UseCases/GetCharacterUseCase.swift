@@ -16,7 +16,7 @@ public class GetCharacterUseCase: GetCharacterUseCaseProtocol {
         self.repository = repository
     }
 
-    public func execute(with params: GetCharactersParams) async -> Result<[Character], AppFailure> {
-        await repository.getCharacters(from: params.offset)
+    public func execute(with params: GetCharactersParams, completion: @escaping (Result<[Character], AppFailure>) -> Void) {
+        repository.getCharacters(from: params.offset, completion: completion)
     }
 }

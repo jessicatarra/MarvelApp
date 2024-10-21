@@ -9,5 +9,5 @@ import Entities
 import Failures
 
 public protocol CharacterRepositoryProtocol {
-    func getCharacters(from offset: Int) async -> Result<[Character], AppFailure>
+    func getCharacters(from offset: Int, completion: @escaping (Result<[Character], AppFailure>) -> Void)
 }
