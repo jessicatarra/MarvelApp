@@ -47,7 +47,7 @@ extension HomeViewModel {
                 if characters.isEmpty {
                     state = .empty
                 } else {
-                    state = .loaded
+                    state = .loaded(characters)
                 }
             case .failure(let err):
                 state = .error(err.localizedDescription)

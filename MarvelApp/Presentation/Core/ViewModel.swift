@@ -13,5 +13,5 @@ class ViewModel: ObservableObject {
 }
 
 enum ViewState: Equatable {
-    case initial, loading, error(String), loaded, empty
+    case initial, loading, error(String), loaded([CharacterItem]), empty
 }

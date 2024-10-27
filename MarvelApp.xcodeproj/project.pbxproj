@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B2A6AAEA2CCD43450074C94E /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = B2A6AAE92CCD43450074C94E /* Nuke */; };
+		B2A6AAEC2CCD43450074C94E /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = B2A6AAEB2CCD43450074C94E /* NukeExtensions */; };
+		B2A6AAEE2CCD43450074C94E /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = B2A6AAED2CCD43450074C94E /* NukeUI */; };
 		B2E5CC0E2CAA34E300C912E1 /* DataSource in Frameworks */ = {isa = PBXBuildFile; productRef = B2E5CC0D2CAA34E300C912E1 /* DataSource */; };
 		B2E5CC122CAA34E300C912E1 /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = B2E5CC112CAA34E300C912E1 /* Models */; };
 		B2E5CC142CAA34E300C912E1 /* Repositories in Frameworks */ = {isa = PBXBuildFile; productRef = B2E5CC132CAA34E300C912E1 /* Repositories */; };
@@ -45,9 +48,22 @@
 		B2E5CC0B2CAA34C300C912E1 /* Data */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Data; path = Packages/Data; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B2A6AAF12CCD57DF0074C94E /* Exceptions for "MarvelApp" folder in "MarvelApp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = B2DE42C42CA83A320090C9FD /* MarvelApp */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B2DE42C72CA83A320090C9FD /* MarvelApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B2A6AAF12CCD57DF0074C94E /* Exceptions for "MarvelApp" folder in "MarvelApp" target */,
+			);
 			path = MarvelApp;
 			sourceTree = "<group>";
 		};
@@ -69,10 +85,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2E5CC1E2CAA34E300C912E1 /* UseCases in Frameworks */,
+				B2A6AAEE2CCD43450074C94E /* NukeUI in Frameworks */,
 				B2E5CC212CAA350700C912E1 /* Swinject in Frameworks */,
 				B2E5CC1A2CAA34E300C912E1 /* RepositoryProtocol in Frameworks */,
+				B2A6AAEA2CCD43450074C94E /* Nuke in Frameworks */,
 				B2E5CC142CAA34E300C912E1 /* Repositories in Frameworks */,
 				B2E5CC1C2CAA34E300C912E1 /* UseCaseProtocol in Frameworks */,
+				B2A6AAEC2CCD43450074C94E /* NukeExtensions in Frameworks */,
 				B2E5CC262CAA351C00C912E1 /* ReactiveMoya in Frameworks */,
 				B2E5CC242CAA351C00C912E1 /* Moya in Frameworks */,
 				B2E5CC122CAA34E300C912E1 /* Models in Frameworks */,
@@ -161,6 +180,9 @@
 				B2E5CC202CAA350700C912E1 /* Swinject */,
 				B2E5CC232CAA351C00C912E1 /* Moya */,
 				B2E5CC252CAA351C00C912E1 /* ReactiveMoya */,
+				B2A6AAE92CCD43450074C94E /* Nuke */,
+				B2A6AAEB2CCD43450074C94E /* NukeExtensions */,
+				B2A6AAED2CCD43450074C94E /* NukeUI */,
 			);
 			productName = MarvelApp;
 			productReference = B2DE42C52CA83A320090C9FD /* MarvelApp.app */;
@@ -247,6 +269,7 @@
 			packageReferences = (
 				B2E5CC1F2CAA350000C912E1 /* XCRemoteSwiftPackageReference "Swinject" */,
 				B2E5CC222CAA351C00C912E1 /* XCRemoteSwiftPackageReference "Moya" */,
+				B2A6AAE82CCD43450074C94E /* XCRemoteSwiftPackageReference "Nuke" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B2DE42C62CA83A320090C9FD /* Products */;
@@ -472,6 +495,7 @@
 				DEVELOPMENT_TEAM = 9NCCX2CZ44;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MarvelApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -501,6 +525,7 @@
 				DEVELOPMENT_TEAM = 9NCCX2CZ44;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MarvelApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -633,6 +658,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		B2A6AAE82CCD43450074C94E /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.8.0;
+			};
+		};
 		B2E5CC1F2CAA350000C912E1 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject";
@@ -652,6 +685,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		B2A6AAE92CCD43450074C94E /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2A6AAE82CCD43450074C94E /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+		B2A6AAEB2CCD43450074C94E /* NukeExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2A6AAE82CCD43450074C94E /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeExtensions;
+		};
+		B2A6AAED2CCD43450074C94E /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2A6AAE82CCD43450074C94E /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeUI;
+		};
 		B2E5CC0D2CAA34E300C912E1 /* DataSource */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DataSource;

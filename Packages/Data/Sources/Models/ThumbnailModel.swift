@@ -13,7 +13,8 @@ public struct ThumbnailModel {
 
     public var url: URL? {
         guard let path, let ext = thumbnailExtension else { return nil }
-        return URL(string: "\(path).\(ext)")
+        let fullPath = "\(path).\(ext)"
+        return URL(string: fullPath)
     }
 
     init(

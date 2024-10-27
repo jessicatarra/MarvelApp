@@ -17,7 +17,7 @@ struct MarvelAppApp: App {
 
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            ContainerView()
         }
     }
 }
